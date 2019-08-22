@@ -1,0 +1,59 @@
+@model Auctions.Models.LoginRegModel;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h3>Register</h3>
+        <form class="user-form" asp-action="Register" asp-controller="auction" method="post">
+            <span asp-validation-for="newUser.firstName"></span>
+            <div class="user-form-input">
+                <p>First Name</p>
+                <input type="text" asp-for="newUser.firstName">
+            </div>
+            <span asp-validation-for="newUser.lastName"></span>
+            <div class="user-form-input">
+                <p>Last Name</p>
+                <input type="text" asp-for="newUser.lastName">
+            </div>
+            <span asp-validation-for="newUser.userName"></span>
+            <div class="user-form-input">
+                <p>Username</p>
+                <input type="text" asp-for="newUser.userName">
+            </div>
+            <span asp-validation-for="newUser.password"></span>
+            <div class="user-form-input">
+                <p>Password</p>
+                <input type="password" asp-for="newUser.password">
+            </div>
+            <span asp-validation-for="newUser.confirmPassword"></span>
+            <div class="user-form-input">
+                <p>ConfirmPassword</p>
+                <input type="password" asp-for="newUser.confirmPassword">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <h3>Login</h3>
+        <form class="user-form" asp-action="Login" asp-controller="auction" method="post">
+            <span asp-validation-for="newLogin.username"></span>
+            <div class="user-form-input">
+                <p>username</p>
+                <input type="text" asp-for="newLogin.username">
+            </div>
+            <span asp-validation-for="newLogin.password"></span>
+            <div class="user-form-input">
+                <p>password</p>
+                <input type="password" asp-for="newLogin.password">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
